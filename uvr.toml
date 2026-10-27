@@ -1,0 +1,13 @@
+[project]
+name = "beyond2D-review"
+r_version = ">=4.3.0"
+
+[dependencies]
+IRkernel = "*"
+dplyr = "*"
+ggplot2 = "*"
+readr = "*"
+scales = "*"
+patchwork = "*"
+gridGraphics = "*"
+scatterplot3d = "*"

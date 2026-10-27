@@ -1,0 +1,25 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: \.ipynb$
+      - id: end-of-file-fixer
+        exclude: \.ipynb$
+      - id: check-yaml
+      - id: check-toml
+        args: [--maxkb=1024]
+      - id: check-merge-conflict
+
+  # keep cell outputs (plots, tracebacks) out of the repo; the notebooks are re-run to regenerate them
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.9.1
+    hooks:
+      - id: nbstripout
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.3
+    hooks:
+      - id: ruff
+        types_or: [python, jupyter]
+        args: [--fix]
