@@ -8,3 +8,7 @@ dependencies = [
     "jupyter",
     "ipykernel",
 ]
+
+[tool.ruff]
+# 1.throughput/scripts is generated from the notebooks by 1.throughput/run_throughput.sh
+extend-exclude = ["1.throughput/scripts"]
